@@ -1,0 +1,17 @@
+{
+  "short_name": "Eazi Profit",
+  "name": "Eazi Profit Petroleum Suite",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d172a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
