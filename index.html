@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PetroCalc Suite</title>
+    <!-- LINK TO EXTERNAL CSS LAYER -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+<!-- BRAND LOGO COMPONENT CONTAINER -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Eazi Profit Logo">
+
+        <h2>Eazi Profit</h2>
+        <p class="subtitle">API & VCF Core Engine</p>
+
+        <!-- Dynamic Form Fields Component -->
+        <!-- DUAL INPUT MATRIX COMPONENT -->
+<div class="component-card">
+    
+    <!-- GRID BLOCK A: DIRECT ENTRY METHOD -->
+    <div class="input-section-header">Method A: Direct Entry</div>
+    <div class="field-grid">
+        <div class="field-group">
+            <label for="apiInput">Observed API</label>
+            <input type="number" id="apiInput" step="0.01" placeholder="e.g., 17.43" inputmode="decimal">
+        </div>
+        <div class="field-group">
+            <label for="tempInput">Observed Temp (°F)</label>
+            <input type="number" id="tempInput" step="0.1" placeholder="e.g., 78.8" inputmode="decimal">
+        </div>
+    </div>
+
+    <div class="divider-text">-- OR --</div>
+
+    <!-- GRID BLOCK B: PYCNOMETER BALANCE METHOD -->
+    <div class="input-section-header">Method B: Pycnometer Mass Matrix</div>
+    <div class="field-grid grid-3-col">
+        <div class="field-group">
+            <label for="w0Input">W₀ (Empty Flask)</label>
+            <input type="number" id="w0Input" step="0.0001" placeholder="grams" inputmode="decimal">
+        </div>
+        <div class="field-group">
+            <label for="wwInput">Ww (Water Fill)</label>
+            <input type="number" id="wwInput" step="0.0001" placeholder="grams" inputmode="decimal">
+        </div>
+        <div class="field-group">
+            <label for="wsInput">Ws (Sample Fill)</label>
+            <input type="number" id="wsInput" step="0.0001" placeholder="grams" inputmode="decimal">
+        </div>
+    </div>
+    <div class="field-grid">
+        <div class="field-group">
+            <label for="pycTempInput">Pycnometer Temp (°F)</label>
+            <input type="number" id="pycTempInput" step="0.1" placeholder="e.g., 78.8" inputmode="decimal">
+        </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <button id="computeBtn">Compute Parameters</button>
+    <button id="resetBtn" class="secondary-btn">Reset Suite</button>
+</div>
+
+
+        <!-- Analytical Output Display Component -->
+        <div class="component-card output-card">
+            <div class="display-row">
+                <span class="display-label">Corrected API @ 60°F</span>
+                <span class="display-value" id="resultAPI">--</span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">Corrected SG @ 60/60°F</span>
+                <span class="display-value" id="resultSG">--</span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">Volume Correction Factor (VCF / CTL)</span>
+                <span class="display-value" id="resultVCF">--</span>
+            </div>
+		
+	    <!-- ADD THIS BUTTON INSIDE THE BOTTOM OF YOUR OUTPUT CARD -->
+        <button id="copyBtn" class="brand-action-btn" style="margin-top: 16px; background-color: #0d172a;">Copy Results Matrix</button>
+        </div>
+    </div>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT ENGINE -->
+    <script src="app.js"></script>
+</body>
+</html>
