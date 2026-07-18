@@ -1,11 +1,14 @@
-const CACHE_NAME = "eazi-profit-v1";
+const CACHE_NAME = "eazi-profit-v2"; // We changed v1 to v2 to force your phone to update its memory cache!
 const ASSETS = [
   "index.html",
   "style.css",
   "app.js",
+  "logo.png",
   "logo.jpg",
   "manifest.json"
 ];
+// ... leave the rest of your sw.js file exactly as it was
+
 
 // Installs the background application assets locally
 self.addEventListener("install", (event) => {
