@@ -25,11 +25,14 @@ body {
     grid-template-columns: 1fr 1fr; /* Splits screen into 2 columns */
     gap: 12px;
     margin-bottom: 16px;
+    align-items: end; /* FORCES both input boxes to align perfectly at their bottom baselines */
 }
 
 .grid-3-col {
     grid-template-columns: 1fr 1fr 1fr; /* Splits screen into 3 columns for weights */
+    align-items: end; /* Ensures the pycnometer boxes line up perfectly too */
 }
+
 
 .divider-text {
     text-align: center;
