@@ -112,3 +112,12 @@ function resetSuiteDisplay() {
     document.getElementById("resultSG").innerText = "--";
     document.getElementById("resultVCF").innerText = "--";
 }
+
+// Register Service Worker for total 100% offline capability
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js")
+            .then(reg => console.log("Eazi Profit Engine: Offline Matrix Active."))
+            .catch(err => console.log("PWA Error: Stream blocked.", err));
+    });
+}
